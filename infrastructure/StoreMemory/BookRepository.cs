@@ -9,9 +9,15 @@ namespace Store.Memory
 
         private readonly Book[] books = new[]
         {
-            new Book(1, "ISBN 12312-31231", "D. Knuth", "Art Of Programming"),
-            new Book(2, "ISBN 12312-31232", "M. Fowler", "Refactoring"),
-            new Book(3, "ISBN 12312-31233", "B. Kernighan, D.Ritchie", "C Programming Language"),
+            new Book(1, "ISBN 12312-31231", "D. Knuth", "Art Of Programming",
+                "The bible of all fundamental algorithms and the work that taught many of today’s software developers most of what they know about computer programming.",
+                7.19m),
+            new Book(2, "ISBN 12312-31232", "M. Fowler", "Refactoring",
+                "The book \"Refactoring: Improving the Design of Existing Code\" by Martin Fowler is a fundamental work that has changed the way programmers approach code. It's not just a book, but a guide to action.",
+                12.45m),
+            new Book(3, "ISBN 12312-31233", "B. Kernighan, D.Ritchie", "C Programming Language",
+                "Dennis Ritchie is the creator of the C language, and both authors developed the UNIX operating system. In fact, the C language was created to rewrite UNIX. This makes the book a primary source written by the creators of the language themselves.",
+                14.98m),
         };
 
         public Book[] GetAllByIsbn(string isbn) 
@@ -25,6 +31,11 @@ namespace Store.Memory
             return books.Where(book => book.Author.Contains(query) 
                                     || book.Title.Contains(query))
                         .ToArray();
+        }
+
+        public Book GetById(int id)
+        {
+            return books.Single(book => book.Id == id);
         }
     }
 }

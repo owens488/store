@@ -11,4 +11,8 @@
     <ProjectReference Include="..\..\infrastructure\StoreMemory\Store.Memory.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Book\" />
+  </ItemGroup>
+
 </Project>
