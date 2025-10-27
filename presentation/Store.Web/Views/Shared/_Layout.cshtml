@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - BookStore</title>
+    <title>@ViewData["Title"] - BookShop</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -15,6 +15,22 @@
                 <input class="form-control mr-sm-2" type="search" name="query" placeholder="автор или название" />
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Искать</button>
             </form>
+            <span class="navbar-text ml-auto">
+             @{
+                 Cart cart;
+                 if (!Context.Session.TryGetCart(out cart))
+                     cart = new Cart();
+
+                 if (cart.Items.Count == 0)
+                 {
+                     @:Корзина пуста
+                 }
+                 else
+                 {
+                     @:Товаров @cart.Items.Count на сумму @cart.Amount
+                 }
+             }
+            </span>
         </nav>
     </header>
     <div class="container">
