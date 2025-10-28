@@ -10,13 +10,13 @@ namespace Store.Memory
         private readonly Book[] books = new[]
         {
             new Book(1, "ISBN 12312-31231", "D. Knuth", "Art Of Programming",
-                "The bible of all fundamental algorithms and the work that taught many of today’s software developers most of what they know about computer programming.",
+                "Кнут рассматривает программирование не как ремесло, а как искусство (art) и науку. Основная цель серии — систематизировать и предоставить глубокий математический анализ основных алгоритмов, которые составляют основу всех компьютерных программ.\r\n\r\nГлавный посыл: чтобы быть настоящим мастером программирования, необходимо понимать не только как работает алгоритм, но и почему он работает, какова его эффективность (с математической точки зрения) и в каких случаях его следует применять.",
                 7.19m),
             new Book(2, "ISBN 12312-31232", "M. Fowler", "Refactoring",
-                "The book \"Refactoring: Improving the Design of Existing Code\" by Martin Fowler is a fundamental work that has changed the way programmers approach code. It's not just a book, but a guide to action.",
+                "Рефакторинг — это контролируемый процесс улучшения структуры существующего кода без изменения его внешнего поведения.\r\n\r\nОсновной посыл: код — это живой организм, который нужно постоянно улучшать, чтобы он оставался чистым, понятным и легким для изменения.",
                 12.45m),
             new Book(3, "ISBN 12312-31233", "B. Kernighan, D.Ritchie", "C Programming Language",
-                "Dennis Ritchie is the creator of the C language, and both authors developed the UNIX operating system. In fact, the C language was created to rewrite UNIX. This makes the book a primary source written by the creators of the language themselves.",
+                "Деннис Ритчи — создатель языка C и один из создателей операционной системы UNIX. Фактически, книга написана создателем языка — это первоисточник в чистом виде.",
                 14.98m),
         };
 
