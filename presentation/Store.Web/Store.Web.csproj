@@ -12,8 +12,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\DeliveryMethod\Controllers\" />
+    <Folder Include="Areas\DeliveryMethod\Data\" />
+    <Folder Include="Areas\DeliveryMethod\Models\" />
+    <Folder Include="Areas\DeliveryMethod\Views\" />
     <Folder Include="Views\Book\" />
-    <Folder Include="Views\Order\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
   </ItemGroup>
 
 </Project>
